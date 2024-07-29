@@ -13,7 +13,6 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // Routes
-
 app.get('/health', (req, res) => {
   try {
     res.status(200).json('Server is up and running');

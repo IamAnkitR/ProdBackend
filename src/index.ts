@@ -5,8 +5,6 @@ import { PORT, DATABASE_URL } from './config';
 
 dotenv.config();
 
-console.log(DATABASE_URL);
-
 mongoose
   .connect(DATABASE_URL)
   .then(() => {
