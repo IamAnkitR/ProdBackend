@@ -1,7 +1,7 @@
-import mongoose from "mongoose";
-import dotenv, { config } from "dotenv";
-import app from "./app";
-import { PORT, DATABASE_URL } from "./config";
+import mongoose from 'mongoose';
+import dotenv from 'dotenv';
+import app from './app';
+import { PORT, DATABASE_URL } from './config';
 
 dotenv.config();
 
@@ -17,5 +17,5 @@ mongoose
     });
   })
   .catch((error: any) => {
-    console.error("Error connecting to MongoDB:", error);
+    console.error('Error connecting to MongoDB:', error);
   });

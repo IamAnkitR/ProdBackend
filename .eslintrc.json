@@ -1,0 +1,31 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module"
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier",
+    "plugin:prettier/recommended"
+  ],
+  "plugins": ["@typescript-eslint"],
+  "env": {
+    "node": true,
+    "es6": true
+  },
+  "rules": {
+    "@typescript-eslint/no-explicit-any": "off", // Disable rule for 'any' type
+    "@typescript-eslint/no-unused-vars": [
+      "warn", // Change to "warn" to avoid errors for unused variables
+      {
+        "argsIgnorePattern": "^_", // Ignore unused variables that start with _
+        "varsIgnorePattern": "^_", // Ignore unused variables that start with _
+        "vars": "all",
+        "args": "none", // Set to "none" to not check for unused function arguments
+        "ignoreRestSiblings": true
+      }
+    ]
+  }
+}
